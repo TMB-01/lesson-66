@@ -1,0 +1,10 @@
+$main-bg: red;
+
+.counter-box {
+  button {
+    display: block;
+    margin: auto;
+    padding: 10px 20px;
+    background-color: $main-bg;
+  }
+}
