@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { StyledButton, StyledButtonAddOne,ButtonWrapper } from "./styles";
 
 class CounterButton extends Component {
   constructor(props) {
@@ -7,14 +8,18 @@ class CounterButton extends Component {
   }
   render() {
     return (
-      <div>
-        <button onClick={this.props.increment}>increment</button>
-        <button onClick={this.props.decrement}>decrement</button>
-        <button onClick={() => this.props.addNumber(5)}>add number</button>
-        <button onClick={() => this.props.subtractNumber(5)}>
+      <ButtonWrapper>
+        <StyledButtonAddOne onClick={this.props.increment}>
+          increment
+        </StyledButtonAddOne>
+        <StyledButton className={"button"} onClick={this.props.decrement}>decrement</StyledButton>
+        <StyledButton onClick={() => this.props.addNumber(5)}>
+          add number
+        </StyledButton>
+        <StyledButton onClick={() => this.props.subtractNumber(5)}>
           subtract number
-        </button>
-      </div>
+        </StyledButton>
+      </ButtonWrapper>
     );
   }
 }
